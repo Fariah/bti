@@ -8,6 +8,20 @@ use Illuminate\Console\Command;
 class AddRoles extends Command
 {
     /**
+     * TODO Need to add to install script
+     *  php artisan entrust:addRole admin --display_name="Admin" --description="Site administrator"
+     *  php artisan entrust:addRole user --display_name="User" --description="Default user"
+     *
+     *  php artisan entrust:addPermission admin --display_name="Admin Permission" --description="Admin permissions"
+     *  php artisan entrust:addPermission user --display_name="User Permission" --description="User permissions"
+     *
+     *  php artisan entrust:attachPermission admin admin
+     *  php artisan entrust:attachPermission user user
+     */
+
+
+
+    /**
      * The name and signature of the console command.
      *
      * @var string
