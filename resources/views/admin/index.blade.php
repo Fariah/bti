@@ -1,12 +1,8 @@
 <!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>AdminLTE 2 | Dashboard</title>
+    <title>Админка</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
     <link href="{{ asset("/bower_components/AdminLTE/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />
@@ -21,6 +17,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
           apply the skin class to the body tag so the changes take effect.
     -->
     <link href="{{ asset("/bower_components/AdminLTE/dist/css/skins/skin-blue.min.css")}}" rel="stylesheet" type="text/css" />
+
+    <link href="{{ asset("/assets/css/datatables.min.css")}}" rel="stylesheet" type="text/css" />
+
+    {{--<link href="{{ asset("/assets/css/bootstrap-modal.css")}}" rel="stylesheet" type="text/css" />--}}
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -61,11 +61,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{ asset ("/bower_components/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js") }}"></script>
 <!-- Bootstrap 3.3.2 JS -->
 <script src="{{ asset ("/bower_components/AdminLTE/bootstrap/js/bootstrap.min.js") }}" type="text/javascript"></script>
+<script src="{{ asset ("/assets/js/datatables.min.js") }}" type="text/javascript"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset ("/bower_components/AdminLTE/dist/js/app.min.js") }}" type="text/javascript"></script>
 
+<script src="{{ asset('/assets/js/ckeditor/ckeditor.js') }}" type="text/javascript" charset="utf-8" ></script>
+<script src="{{ asset('/assets/js/bootstrap-confirmation.min.js') }}" type="text/javascript" charset="utf-8" ></script>
+
+<script src="{{ asset ("/js/admin.js") }}" type="text/javascript"></script>
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
       Both of these plugins are recommended to enhance the
       user experience -->
+@yield('scripts')
 </body>
 </html>

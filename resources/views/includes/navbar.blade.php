@@ -8,11 +8,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">БТИ</a>
+            <a class="navbar-brand" href="{{ url('/') }}">БТИ</a>
         </div>
         <div class="navbar-collapse collapse navbar-right">
             <ul class="nav navbar-nav">
                 <li {!! $link->activePath('/') !!}><a href="{{ url('/') }}">HOME</a></li>
+                <li {!! $link->activePath('news') !!}><a href="{{ url('/news') }}">NEWS</a></li>
                 <li {!! $link->activePath('about') !!}><a href="{{ url('/about') }}">ABOUT</a></li>
                 <li {!! $link->activePath('contact') !!}><a href="{{ url('/contact') }}">CONTACT</a></li>
                 {{--<li {!! $link->activePath('login') !!}><a href="{{ url('/login') }}">LOGIN</a></li>--}}

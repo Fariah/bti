@@ -170,6 +170,7 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Zizaco\Entrust\EntrustServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
         //
 
         /*
@@ -235,6 +236,7 @@ return [
          */
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Image' => Intervention\Image\Facades\Image::class
 
     ],
 

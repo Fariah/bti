@@ -11,8 +11,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $title = 'Админка';
-        $description = 'Описание админки';
+        $title = 'Статистика';
+        $description = 'Будут подключены google analitics etc.';
         return view('admin/index')->with(['title' => $title, 'description' => $description]);
     }
 

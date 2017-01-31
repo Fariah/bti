@@ -8,7 +8,8 @@
         <ul class="sidebar-menu">
             <li class="header">Админ панель</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="#"><span>Link</span></a></li>
+            <li {!! $link->activePath('admin') !!}><a href="{{ url('/admin') }}"><span>Статистика</span></a></li>
+            <li {!! $link->activePath('admin/news*') !!}><a href="{{ url('/admin/news') }}"><span>Новости</span></a></li>
             <li><a href="#"><span>Another Link</span></a></li>
             <li class="treeview">
                 <a href="#"><span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
