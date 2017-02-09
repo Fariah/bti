@@ -9,6 +9,7 @@
             <li class="header">Админ панель</li>
             <!-- Optionally, you can add icons to the links -->
             <li {!! $link->activePath('admin') !!}><a href="{{ url('/admin') }}"><span>Статистика</span></a></li>
+            <li {!! $link->activePath('admin/home*') !!}><a href="{{ url('/admin/home') }}"><span>Главная</span></a></li>
             <li {!! $link->activePath('admin/news*') !!}><a href="{{ url('/admin/news') }}"><span>Новости</span></a></li>
             <li><a href="#"><span>Another Link</span></a></li>
             <li class="treeview">

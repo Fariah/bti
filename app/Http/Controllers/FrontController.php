@@ -3,13 +3,21 @@
 namespace App\Http\Controllers;
 
 
+use App\StaticPages;
+
 class FrontController extends Controller
 {
     public function home()
     {
         $title = 'Главная';
         $description = 'Описание страницы';
-        return view('pages.home')->with(['title' => $title, 'description' => $description]);
+        $rawData = StaticPages::where('type', StaticPages::TYPE_HOME)->get();
+        $data = [];
+        foreach ($rawData as $item) {
+            $data[$item->code] = $item->content;
+        }
+
+        return view('pages.home')->with(['title' => $title, 'description' => $description, 'data' => $data]);
     }
 
     public function about()

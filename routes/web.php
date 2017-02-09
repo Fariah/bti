@@ -41,16 +41,17 @@ Route::group(['middleware' => 'admin'], function () {
     Route::group(['namespace' => 'Admin'], function () {
         // Controllers Within The "App\Http\Controllers\Admin" Namespace
 
+        //************ Home ***************
+        Route::get('/admin/home', 'HomeController@index');
+        Route::post('/admin/home/update', 'HomeController@postUpdateHome');
+
+        //************ News ***************
         Route::get('/admin/news', 'NewsController@index');
-
         Route::post('/admin/getNewsGrid', 'NewsController@getNewsGrid');
-
         Route::get('/admin/news/add', 'NewsController@getAddNews');
         Route::post('/admin/news/add', 'NewsController@postAddNews');
-
         Route::get('/admin/news/edit/{news}', 'NewsController@getEditNews');
         Route::post('/admin/news/edit/{news}', 'NewsController@postEditNews');
-
         Route::get('/admin/news/delete/{news}', 'NewsController@getDeleteNews');
     });
 
