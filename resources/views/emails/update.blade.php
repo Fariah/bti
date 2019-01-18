@@ -1,1 +1,0 @@
-User {{ $data['user']->first_name }} was updated

@@ -17,12 +17,13 @@ return [
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
+        'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
     ],
 
     'ses' => [
         'key' => env('SES_KEY'),
         'secret' => env('SES_SECRET'),
-        'region' => 'us-east-1',
+        'region' => env('SES_REGION', 'us-east-1'),
     ],
 
     'sparkpost' => [
@@ -33,12 +34,10 @@ return [
         'model' => App\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
-    ],
-
-    'github' => [
-        'client_id' => '19981640396fc7670955',
-        'client_secret' => 'c0545f9c6f3fb079870f43abf162f6d446a76df6',
-        'redirect' => 'http://blog.local/git-hub-callback',
+        'webhook' => [
+            'secret' => env('STRIPE_WEBHOOK_SECRET'),
+            'tolerance' => env('STRIPE_WEBHOOK_TOLERANCE', 300),
+        ],
     ],
 
 ];
